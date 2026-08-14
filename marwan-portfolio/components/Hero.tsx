@@ -36,7 +36,7 @@ export default function Hero() {
             href="#agent"
             className="px-7 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition"
           >
-            Try Marwan AI
+            Try Moscow AI
           </Link>
           <Link
             href="#projects"

@@ -12,7 +12,7 @@ export default function AgentChat() {
     {
       role: "assistant",
       content:
-        "Hi — I'm Marwan AI. I answer using verified information from this portfolio only. Ask me about Marwan's projects, skills, experience, certifications, or how to contact him.",
+        "Hi, I'm Moscow AI. I answer using verified information from this portfolio only. Ask me about Marwan's projects, skills, experience, certifications, or how to contact him.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -69,7 +69,7 @@ export default function AgentChat() {
           Assistant
         </p>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
-          Marwan AI
+          Moscow AI
         </h2>
         <p className="text-white/60 mb-8">
           A personal AI assistant that answers questions using verified portfolio information only.

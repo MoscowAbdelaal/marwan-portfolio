@@ -13,7 +13,7 @@ export default function About() {
 
         <div className="space-y-6 text-white/70 leading-relaxed text-lg">
           <p>
-            I&apos;m a 2nd-year Software Engineering student at the German
+            I&apos;m a 3rd-year Software Engineering student at the German
             International University (GIU) and currently a Backend AI Engineering
             Intern at FlyRank AI.
           </p>
@@ -33,15 +33,15 @@ export default function About() {
         {/* Quick facts */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
-            <p className="text-2xl font-semibold text-white">GIU</p>
-            <p className="text-sm text-white/50 mt-1">Software Engineering</p>
+            <p className="text-2xl font-semibold text-white">Software Engineering</p>
+            <p className="text-sm text-white/50 mt-1">German International University - GIU</p>
           </div>
           <div>
-            <p className="text-2xl font-semibold text-white">FlyRank AI</p>
-            <p className="text-sm text-white/50 mt-1">AI Engineering Intern</p>
+            <p className="text-2xl font-semibold text-white">Backend AI Engineering Intern</p>
+            <p className="text-sm text-white/50 mt-1">FlyRank AI</p>
           </div>
           <div>
-            <p className="text-2xl font-semibold text-white">10</p>
+            <p className="text-2xl font-semibold text-white">15+</p>
             <p className="text-sm text-white/50 mt-1">Anthropic Certifications</p>
           </div>
           <div>
