@@ -19,9 +19,12 @@ export default function AgentChat() {
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+useEffect(() => {
+  // Only scroll inside the chat box, not the whole page
+  if (messages.length > 1) {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+}, [messages]);
 
   async function sendMessage(e: React.FormEvent) {
     e.preventDefault();
