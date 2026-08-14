@@ -97,7 +97,14 @@ useEffect(() => {
               </div>
             ))}
             {loading && (
-              <div className="text-zinc-500 text-sm">Moscow AI is thinking...</div>
+              <div className="flex items-center gap-2 text-zinc-500 text-sm">
+                <div className="flex gap-1">
+                  <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                  <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                  <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full animate-bounce"></span>
+                </div>
+                <span>Moscow AI is thinking...</span>
+              </div>
             )}
             <div ref={bottomRef} />
           </div>
