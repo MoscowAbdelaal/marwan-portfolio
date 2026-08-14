@@ -1,14 +1,14 @@
 export default function FutureWork() {
   return (
-    <section id="future" className="py-24 px-6">
+    <section id="future" className="py-24 px-6 animate-fade-in">
       <div className="max-w-4xl mx-auto">
-        <p className="text-sm uppercase tracking-widest text-white/40 mb-3">
+        <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3">
           Future Work
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-50">
           Currently exploring
         </h2>
-        <p className="text-white/60 mb-12 max-w-2xl">
+        <p className="text-zinc-400 mb-12 max-w-2xl">
           I’m still early in my career. These are the areas I’m actively learning and plan to go deeper into.
         </p>
 
@@ -37,10 +37,10 @@ export default function FutureWork() {
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+              className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6"
             >
-              <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <h3 className="font-semibold text-zinc-50 mb-2">{item.title}</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 {item.description}
               </p>
             </div>

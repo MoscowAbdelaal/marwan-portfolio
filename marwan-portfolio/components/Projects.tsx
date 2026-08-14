@@ -2,15 +2,15 @@ import { projects } from "@/lib/data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-zinc-950/50">
+    <section id="projects" className="py-24 px-6 bg-zinc-900/40 animate-fade-in">
       <div className="max-w-6xl mx-auto">
-        <p className="text-sm uppercase tracking-widest text-white/40 mb-3">
+        <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3">
           Projects
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-50">
           Selected Work
         </h2>
-        <p className="text-white/60 mb-12 max-w-2xl">
+        <p className="text-zinc-400 mb-12 max-w-2xl">
           Production systems, AI integrations, cryptography, machine learning, and full-stack applications I&apos;ve built and shipped.
         </p>
 
@@ -18,10 +18,10 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 hover:border-white/20 transition"
+              className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 hover:border-zinc-700 transition"
             >
               <div className="flex items-start justify-between gap-4 mb-4">
-                <h3 className="text-xl font-semibold leading-snug">
+                <h3 className="text-xl font-semibold leading-snug text-zinc-50">
                   {project.title}
                 </h3>
                 {project.highlight && (
@@ -31,7 +31,7 @@ export default function Projects() {
                 )}
               </div>
 
-              <p className="text-white/60 text-sm leading-relaxed mb-5">
+              <p className="text-zinc-400 text-sm leading-relaxed mb-5">
                 {project.description}
               </p>
 
@@ -39,7 +39,7 @@ export default function Projects() {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-xs px-2.5 py-1 rounded-md bg-white/5 text-white/70 border border-white/10"
+                    className="text-xs px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-300 border border-zinc-700"
                   >
                     {t}
                   </span>
@@ -51,12 +51,12 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white/50 hover:text-white transition inline-flex items-center gap-1"
+                  className="text-sm text-zinc-500 hover:text-zinc-200 transition inline-flex items-center gap-1"
                 >
                   View on GitHub →
                 </a>
               ) : (
-                <span className="text-sm text-white/30">Private / Academic</span>
+                <span className="text-sm text-zinc-600">Private / Academic</span>
               )}
             </div>
           ))}
