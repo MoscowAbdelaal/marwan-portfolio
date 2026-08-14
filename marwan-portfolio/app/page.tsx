@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Certifications from "@/components/Certifications";
 import AgentChat from "@/components/AgentChat";
+import FutureWork from "@/components/FutureWork";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Experience />
       <Certifications />
       <AgentChat />
+      <FutureWork />
       <Contact />
     </>
   );
