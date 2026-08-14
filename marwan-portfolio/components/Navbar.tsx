@@ -22,7 +22,7 @@ export default function Navbar() {
           MARWAN ABDELAAL
         </Link>
 
-        {/* Desktop links */}
+        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
           {links.map((link) => (
             <Link
@@ -33,9 +33,18 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          <a
+            href="/cv/Marwan_Abdelaal_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 px-4 py-1.5 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm"
+          >
+            Download CV
+          </a>
         </div>
 
-        {/* Mobile hamburger button */}
+        {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-zinc-300 hover:text-white"
@@ -67,6 +76,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="/cv/Marwan_Abdelaal_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="text-zinc-300 hover:text-white transition py-2"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       )}
