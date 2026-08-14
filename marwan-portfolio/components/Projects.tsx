@@ -11,8 +11,7 @@ export default function Projects() {
           Selected Work
         </h2>
         <p className="text-white/60 mb-12 max-w-2xl">
-          Production systems, AI integrations, and full-stack applications
-          I&apos;ve built and shipped.
+          Production systems, AI integrations, cryptography, machine learning, and full-stack applications I&apos;ve built and shipped.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -22,9 +21,11 @@ export default function Projects() {
               className="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 hover:border-white/20 transition"
             >
               <div className="flex items-start justify-between gap-4 mb-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl font-semibold leading-snug">
+                  {project.title}
+                </h3>
                 {project.highlight && (
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 whitespace-nowrap">
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 whitespace-nowrap shrink-0">
                     {project.highlight}
                   </span>
                 )}
@@ -45,7 +46,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              {project.github && (
+              {project.github ? (
                 <a
                   href={project.github}
                   target="_blank"
@@ -54,6 +55,8 @@ export default function Projects() {
                 >
                   View on GitHub →
                 </a>
+              ) : (
+                <span className="text-sm text-white/30">Private / Academic</span>
               )}
             </div>
           ))}

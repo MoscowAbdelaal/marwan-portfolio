@@ -13,22 +13,26 @@ export const skills = [
   },
   {
     category: "AI & ML",
-    items: ["Hugging Face", "Ollama", "NLP", "Prompt Engineering", "Embeddings", "Zero-Shot Classification"],
+    items: ["Hugging Face", "Ollama", "NLP", "Prompt Engineering", "Embeddings", "Naive Bayes", "KNN", "K-Means", "PCA"],
+  },
+  {
+    category: "Security",
+    items: ["3DES", "RSA", "Diffie-Hellman", "AES", "Cryptographic Protocols", "SQL Injection Prevention"],
   },
   {
     category: "Data & Scraping",
-    items: ["Cheerio", "Axios", "Zod", "Web Scraping", "Data Validation", "CSV Export", "Caching"],
-  },
-  {
-    category: "Testing",
-    items: ["Automated Testing", "Postman", "API Testing", "Parameterized Queries"],
+    items: ["Cheerio", "Axios", "Zod", "pandas", "scikit-learn", "matplotlib", "Jupyter Notebook"],
   },
   {
     category: "DevOps",
     items: ["Docker", "Docker Compose", "Git", "GitHub", "GitLab", "CI/CD"],
   },
   {
-    category: "Frameworks & Practices",
-    items: ["React.js", "Agile", "Scrum", "OOP", "Security Best Practices"],
+    category: "Frameworks & Distributed",
+    items: ["React.js", "JavaFX", "Unity", ".NET", "MapReduce", "Weak Consistency", "Distributed Locking"],
+  },
+  {
+    category: "Testing & Soft Skills",
+    items: ["Automated Testing", "Postman", "API Validation", "Agile", "Scrum", "Leadership"],
   },
 ];

@@ -13,20 +13,17 @@ export default function About() {
 
         <div className="space-y-6 text-white/70 leading-relaxed text-lg">
           <p>
-            I&apos;m a 3rd-year Software Engineering student at the German
-            International University (GIU) and currently a Backend AI Engineering
-            Intern at FlyRank AI.
+            I&apos;m a 3rd-year Software Engineering student at the German International University (GIU)
+            with a Minor in IT Security, currently working as a Backend AI Engineering Intern at FlyRank AI.
           </p>
           <p>
-            At FlyRank I build production-ready Node.js/Express REST APIs,
-            implement JWT authentication, design persistent database systems
-            with PostgreSQL + Docker, and create web scraping pipelines enriched
-            with local AI models.
+            At FlyRank I ship production-ready Node.js/Express REST APIs,
+            implement JWT authentication, design persistent database systems with PostgreSQL + Docker, 
+            and build web scraping pipelines enriched with local AI models.
           </p>
           <p>
-            I also led a team of 10 to ship an AI-powered MERN platform (GIU
-            Nexus) and hold 15+ Anthropic Academy certifications focused on AI
-            fluency, Claude tooling, agents, and subagents.
+            I also led a team of 10 to ship an AI-powered MERN platform (GIU Nexus)
+            and hold 20 Anthropic Academy certifications focused on AI fluency, Claude tooling, agents, MCP, and more.
           </p>
         </div>
 
@@ -41,7 +38,7 @@ export default function About() {
             <p className="text-sm text-white/50 mt-1">FlyRank AI</p>
           </div>
           <div>
-            <p className="text-2xl font-semibold text-white">15+</p>
+            <p className="text-2xl font-semibold text-white">20</p>
             <p className="text-sm text-white/50 mt-1">Anthropic Certifications</p>
           </div>
           <div>
