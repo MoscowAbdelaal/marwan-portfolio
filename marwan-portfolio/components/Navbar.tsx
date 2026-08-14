@@ -7,13 +7,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#experience", label: "Experience" },
-    { href: "#agent", label: "Moscow AI" },
-    { href: "#contact", label: "Contact" },
-  ];
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#agent", label: "Moscow AI" },
+  { href: "#future", label: "Future" },
+  { href: "#contact", label: "Contact" },
+];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
