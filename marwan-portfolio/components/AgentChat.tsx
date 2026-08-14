@@ -95,7 +95,7 @@ export default function AgentChat() {
               </div>
             ))}
             {loading && (
-              <div className="text-white/40 text-sm">Marwan AI is thinking...</div>
+              <div className="text-white/40 text-sm">Moscow AI is thinking...</div>
             )}
             <div ref={bottomRef} />
           </div>
