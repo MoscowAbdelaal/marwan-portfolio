@@ -1,6 +1,6 @@
 export const profile = {
   name: "Marwan Abdelaal",
-  title: "Backend & Full-Stack Developer | AI Engineering Intern | Software Engineering Student",
+  title: "Backend & Full-Stack Developer | Backend AI Engineering Intern | Software Engineering Student",
   location: "Cairo, Egypt",
   email: "marwan.abdelaal@outlook.com",
   phone: "+201111210005",

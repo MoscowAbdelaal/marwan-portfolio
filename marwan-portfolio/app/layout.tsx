@@ -7,22 +7,22 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Marwan Abdelaal | Backend & AI Engineering",
+  title: "Marwan Abdelaal | Full-Stack & Backend AI Engineer",
   description:
-    "Backend & Full-Stack Developer and AI Engineering Intern. Building production systems and shipping personal AI agents.",
+    "Backend & Full-Stack Developer and Backend AI Engineering Intern. Building production systems and shipping personal AI agents.",
   keywords: [
     "Marwan Abdelaal",
     "Backend Developer",
     "Full-Stack Developer",
-    "AI Engineering",
+    "Backend AI Engineering",
     "Node.js",
     "Portfolio",
   ],
   authors: [{ name: "Marwan Abdelaal" }],
   openGraph: {
-    title: "Marwan Abdelaal | Backend & AI Engineering",
+    title: "Marwan Abdelaal | Full-Stack & Backend AI Engineer",
     description:
-      "Backend & Full-Stack Developer and AI Engineering Intern. Building production systems and shipping personal AI agents.",
+      "Backend & Full-Stack Developer and Backend AI Engineering Intern. Building production systems and shipping personal AI agents.",
     url: "https://your-future-domain.com", // change later
     siteName: "Marwan Abdelaal",
     locale: "en_US",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marwan Abdelaal | Backend & AI Engineering",
+    title: "Marwan Abdelaal | Full-Stack & Backend AI Engineer",
     description:
-      "Backend & Full-Stack Developer and AI Engineering Intern.",
+      "Backend & Full-Stack Developer and Backend AI Engineering Intern.",
   },
   icons: {
     icon: "/favicon.ico",

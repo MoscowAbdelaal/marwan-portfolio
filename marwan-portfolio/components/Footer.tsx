@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <p className="text-zinc-300 font-medium">Marwan Abdelaal</p>
           <p className="text-sm text-zinc-500 mt-1">
-            Backend & AI Engineering · Cairo, Egypt
+            Full-Stack & Backend AI Engineering · Cairo, Egypt
           </p>
         </div>
 
