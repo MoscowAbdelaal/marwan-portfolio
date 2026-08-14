@@ -36,3 +36,8 @@ body {
   background: rgba(59, 130, 246, 0.35);
   color: white;
 }
+
+/* Offset for fixed navbar when jumping to sections */
+section[id] {
+  scroll-margin-top: 5rem; /* 80px */
+}
