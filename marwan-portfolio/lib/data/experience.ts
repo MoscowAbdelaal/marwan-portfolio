@@ -32,7 +32,7 @@ export const experience = [
     location: "Cairo, Egypt",
     points: [
       "Coordinated operations across multiple large-scale university events including graduations, career fairs, and seniors photoshoots.",
-      "Served as university representative at Educate Event 2026.",
+      "Served as university representative at EduGate Event 2026.",
       "Managed volunteer teams under high-pressure conditions.",
     ],
   },
