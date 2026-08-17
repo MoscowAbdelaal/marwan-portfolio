@@ -140,7 +140,7 @@ useEffect(() => {
         </div>
 
         <p className="text-xs text-zinc-600 mt-4 text-center">
-          Currently running on verified portfolio data only.
+          Ask me anything about Marwan's work.
         </p>
       </div>
     </section>

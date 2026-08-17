@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Marwan Abdelaal | Full-Stack & Backend AI Engineer",
     description:
       "Backend & Full-Stack Developer and Backend AI Engineering Intern. Building production systems and shipping personal AI agents.",
-    url: "https://your-future-domain.com", // change later
+    url: "https://marwan-abdelaal-portfolio.vercel.app/",
     siteName: "Marwan Abdelaal",
     locale: "en_US",
     type: "website",
