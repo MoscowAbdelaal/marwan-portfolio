@@ -23,7 +23,6 @@ export default function Navbar() {
           MARWAN ABDELAAL
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm text-zinc-400">
           {links.map((link) => (
             <Link
@@ -45,10 +44,9 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-zinc-300 hover:text-white p-1"
+          className="md:hidden text-zinc-300 hover:text-white"
           aria-label="Toggle menu"
         >
           {open ? (
@@ -63,7 +61,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-zinc-800 bg-zinc-950">
           <div className="flex flex-col px-4 sm:px-6 py-4 space-y-3">

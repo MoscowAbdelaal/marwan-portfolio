@@ -2,19 +2,19 @@ import { skills } from "@/lib/data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 animate-fade-in">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 animate-fade-in">
+      <div className="max-w-6xl mx-auto text-center">
         <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3">
           Skills
         </p>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 text-zinc-50">
           Tools and Techniques
         </h2>
-        <p className="text-zinc-400 mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base">
+        <p className="text-zinc-400 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
           Technologies I use to build production systems and AI-powered applications.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 text-left">
           {skills.map((group) => (
             <div
               key={group.category}

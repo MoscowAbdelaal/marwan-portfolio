@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "billing-engine",
-    title: "Usage Metering and Billing Engine – FlyRank Capstone",
+    title: "Usage Metering and Billing Engine",
     description:
       "SaaS usage metering and billing engine with exactly-once metering using idempotency keys, quota enforcement (honest 429/402 responses), AI token cost calculation with cached/reasoning token pricing, and Stripe test mode integration with signature-verified deduplicating webhooks.",
     tech: ["Node.js", "Express", "PostgreSQL", "Redis", "Stripe", "BullMQ", "Idempotency"],
@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     id: "social-publisher",
-    title: "Multi-Platform Social Campaign Publisher – FlyRank Capstone",
+    title: "Multi-Platform Social Campaign Publisher",
     description:
       "Idempotent multi-platform social campaign publisher with durable BullMQ/Redis scheduler, HMAC-verified webhooks that reject forgeries with 400, AES-GCM encrypted OAuth tokens, and rate-limit-aware retry logic with backoff.",
     tech: ["Node.js", "BullMQ", "Redis", "HMAC", "AES-GCM", "OAuth"],
