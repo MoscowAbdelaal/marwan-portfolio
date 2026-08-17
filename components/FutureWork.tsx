@@ -1,18 +1,18 @@
 export default function FutureWork() {
   return (
-    <section id="future" className="py-24 px-6 animate-fade-in">
+    <section id="future" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 animate-fade-in">
       <div className="max-w-4xl mx-auto">
         <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3">
           Future Work
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-50">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 text-zinc-50">
           Currently exploring
         </h2>
-        <p className="text-zinc-400 mb-12 max-w-2xl">
-          I’m still early in my career. These are the areas I’m actively learning and plan to go deeper into.
+        <p className="text-zinc-400 mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base">
+          I&apos;m still early in my career. These are the areas I&apos;m actively learning and plan to go deeper into.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {[
             {
               title: "Stronger Personal Agents",
@@ -22,7 +22,7 @@ export default function FutureWork() {
             {
               title: "Production Backend Skills",
               description:
-                "Going deeper into API design, database performance, Docker, testing, and security based on what I’m learning at FlyRank.",
+                "Going deeper into API design, database performance, Docker, testing, and security based on what I'm learning at FlyRank.",
             },
             {
               title: "AI Engineering Fundamentals",
@@ -37,10 +37,10 @@ export default function FutureWork() {
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6"
+              className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 sm:p-6"
             >
-              <h3 className="font-semibold text-zinc-50 mb-2">{item.title}</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <h3 className="font-semibold text-zinc-50 mb-2 text-sm sm:text-base">{item.title}</h3>
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                 {item.description}
               </p>
             </div>

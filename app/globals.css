@@ -13,6 +13,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Smooth fade-in for sections */
@@ -40,4 +42,46 @@ body {
 /* Offset for fixed navbar when jumping to sections */
 section[id] {
   scroll-margin-top: 5rem; /* 80px */
+}
+
+/* ===== MOBILE IMPROVEMENTS ===== */
+
+/* Better touch targets on mobile */
+button, 
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* Prevent horizontal scroll on mobile */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Better scrolling on mobile */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-friendly text size adjustment */
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+  
+  /* Better touch targets for mobile */
+  button, 
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve spacing on mobile */
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
