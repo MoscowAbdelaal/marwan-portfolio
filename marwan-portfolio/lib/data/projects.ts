@@ -1,19 +1,37 @@
 export const projects = [
   {
+    id: "billing-engine",
+    title: "Usage Metering and Billing Engine – FlyRank Capstone",
+    description:
+      "SaaS usage metering and billing engine with exactly-once metering using idempotency keys, quota enforcement (honest 429/402 responses), AI token cost calculation with cached/reasoning token pricing, and Stripe test mode integration with signature-verified deduplicating webhooks.",
+    tech: ["Node.js", "Express", "PostgreSQL", "Redis", "Stripe", "BullMQ", "Idempotency"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-metering-billing.git",
+    highlight: "FlyRank Capstone · Stripe + Exactly-once",
+  },
+  {
+    id: "social-publisher",
+    title: "Multi-Platform Social Campaign Publisher – FlyRank Capstone",
+    description:
+      "Idempotent multi-platform social campaign publisher with durable BullMQ/Redis scheduler, HMAC-verified webhooks that reject forgeries with 400, AES-GCM encrypted OAuth tokens, and rate-limit-aware retry logic with backoff.",
+    tech: ["Node.js", "BullMQ", "Redis", "HMAC", "AES-GCM", "OAuth"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-social-studio.git",
+    highlight: "FlyRank Capstone · Idempotency + Security",
+  },
+  {
     id: "giu-nexus",
     title: "GIU Nexus – AI-Powered Career & Talent Platform",
     description:
-      "Led a team of 10 to build a full-stack MERN application with Hugging Face NLP for skill extraction and zero-shot classification, cosine similarity recommendations, JWT authentication, and webhook-based notifications. Optimized backend performance and validated all endpoints via Postman.",
-    tech: ["React (Vite)", "Node.js", "Express", "MongoDB", "Hugging Face", "JWT", "Nodemailer", "GitLab"],
+      "Led a team of 10 to build a full-stack MERN application with Hugging Face NLP for skill extraction and zero-shot classification, cosine similarity recommendations, JWT authentication, and webhook-based notifications.",
+    tech: ["React (Vite)", "Node.js", "Express", "MongoDB", "Hugging Face", "JWT"],
     github: "https://github.com/MoscowAbdelaal/GIU-Nexus",
     highlight: "Team lead · 10 people · Full MERN + AI",
   },
   {
     id: "crud-api",
-    title: "CRUD API – Production REST API with Auth & Testing",
+    title: "Production REST API with Auth & Testing",
     description:
-      "Built a full REST API with 12 endpoints, persistent SQLite storage, 23 automated tests at 100% pass rate, JWT auth via Supabase, reusable middleware, and Swagger UI docs. Later migrated to PostgreSQL in Docker using a clean repository pattern.",
-    tech: ["Node.js", "Express", "SQLite", "PostgreSQL", "Docker", "Supabase Auth", "JWT", "Swagger UI"],
+      "Full REST API with 12 endpoints, persistent SQLite then PostgreSQL in Docker, 23 automated tests at 100% pass rate, JWT auth via Supabase, reusable middleware, and Swagger UI documentation.",
+    tech: ["Node.js", "Express", "PostgreSQL", "Docker", "Supabase Auth", "JWT", "Swagger UI"],
     github: "https://github.com/MoscowAbdelaal/crud-api",
     highlight: "100% test pass rate · Production-ready",
   },
@@ -21,17 +39,17 @@ export const projects = [
     id: "web-scraping",
     title: "Web Scraping Pipeline with AI Enrichment",
     description:
-      "Production-grade scraper collecting 60 books with Zod validation, exponential backoff, polite rate limiting, caching (45s → 1s), CSV export, change detection, and local AI enrichment via Ollama for category and summary generation.",
-    tech: ["Node.js", "Cheerio", "Axios", "Zod", "Ollama", "HTTP Server"],
-    github: null,
+      "Production-grade scraper collecting 60 books with Zod validation, exponential backoff, caching (45s → 1s), CSV export, and local AI enrichment via Ollama for category and summary generation.",
+    tech: ["Node.js", "Cheerio", "Axios", "Zod", "Ollama"],
+    github: "https://github.com/MoscowAbdelaal/crud-api/tree/main/scraper",
     highlight: "AI-enriched · Caching + retry logic",
   },
   {
     id: "clash-of-clans",
     title: "Clash of Clans: Heroes – 2-Player Strategy Game",
     description:
-      "Independently built a complete 2-player turn-based strategy game across 3 milestones with full OOP architecture (abstract classes, interfaces, inheritance, custom exceptions) and a JavaFX frontend with real-time updates.",
-    tech: ["Java", "JavaFX", "Eclipse", "OOP", "CSV"],
+      "Independently built a complete 2-player turn-based strategy game with full OOP architecture (abstract classes, interfaces, inheritance, custom exceptions) and a JavaFX frontend with real-time updates.",
+    tech: ["Java", "JavaFX", "OOP"],
     github: "https://github.com/MoscowAbdelaal/Clash-of-clans-Legends",
     highlight: "Full game engine from scratch",
   },
@@ -39,8 +57,8 @@ export const projects = [
     id: "hrms",
     title: "Human Resource Management System (HRMS)",
     description:
-      "Led full EERD and relational schema design, implemented optimized SQL stored procedures as the backend layer, and delivered a multi-role system covering payroll, attendance, leave, hiring, and performance reviews.",
-    tech: ["Microsoft SQL Server", "Node.js", "SQL", "Stored Procedures", "HTML", "CSS"],
+      "Full EERD and relational schema design with optimized SQL stored procedures for a multi-role system covering payroll, attendance, leave, hiring, and performance reviews.",
+    tech: ["Microsoft SQL Server", "Node.js", "SQL", "Stored Procedures"],
     github: null,
     highlight: "Complete database design + backend",
   },
@@ -48,7 +66,7 @@ export const projects = [
     id: "cryptography",
     title: "Cryptography Suite – 3DES & Diffie-Hellman/RSA",
     description:
-      "Implemented Triple DES encryption from scratch using EDE structure across 16-round blocks, and built a secure communication system combining Diffie-Hellman key exchange with RSA digital signatures simulating HTTPS-like secure transmission.",
+      "Implemented Triple DES encryption from scratch using EDE structure, and built a secure communication system combining Diffie-Hellman key exchange with RSA digital signatures.",
     tech: ["Python", "Jupyter Notebook"],
     github: null,
     highlight: "From-scratch cryptography",
@@ -57,8 +75,8 @@ export const projects = [
     id: "ml-classification",
     title: "Machine Learning – Classification & Clustering",
     description:
-      "Built Naive Bayes and KNN classifiers to predict metabolic syndrome risk with hyperparameter tuning and Kaggle submission. Applied K-Means, GMM, BIRCH, and Agglomerative Clustering to 561-feature HAR sensor data with PCA visualization and anomaly detection.",
-    tech: ["Python", "scikit-learn", "pandas", "matplotlib", "Jupyter", "Kaggle"],
+      "Built Naive Bayes and KNN classifiers for metabolic syndrome prediction, plus K-Means, GMM, BIRCH and Agglomerative Clustering on 561-feature HAR sensor data with PCA visualization.",
+    tech: ["Python", "scikit-learn", "pandas", "matplotlib"],
     github: null,
     highlight: "Classification + Clustering + PCA",
   },
@@ -66,7 +84,7 @@ export const projects = [
     id: "distributed-systems",
     title: "Distributed Systems – MapReduce & Theater Booking",
     description:
-      "Implemented MapReduce for inverted index, temperature aggregation, movie ratings, and product sales. Built a distributed theater booking simulation with 4 parallel counters, weak consistency, local queuing, and synchronized global state using distributed locking.",
+      "Implemented MapReduce for inverted index and aggregations, and built a distributed theater booking simulation with parallel counters, weak consistency, and distributed locking.",
     tech: ["Python", "Google Colab"],
     github: null,
     highlight: "MapReduce + Distributed locking",
@@ -75,8 +93,8 @@ export const projects = [
     id: "unity",
     title: "Interactive Media Experience – Unity",
     description:
-      "Designed and built an interactive Unity experience with 4+ media types (graphics, animation, audio, text), featuring 3+ meaningful user interactions, state-based media responses, and a fully playable build.",
-    tech: ["Unity", "C#", "AudioSource", "Animator", "TextMeshPro"],
+      "Interactive Unity experience with multiple media types, meaningful user interactions, state-based responses, and a fully playable build.",
+    tech: ["Unity", "C#"],
     github: null,
     highlight: "Interactive Unity experience",
   },

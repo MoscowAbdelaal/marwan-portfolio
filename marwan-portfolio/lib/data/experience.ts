@@ -6,11 +6,11 @@ export const experience = [
     period: "Jun 2026 – Present",
     location: "Remote",
     points: [
-      "Built a production-ready Node.js/Express REST API with 12 endpoints, full CRUD, SQLite persistent storage, parameterized queries for SQL injection prevention, and 23 automated tests all passing with 100% success rate.",
-      "Implemented a secure JWT authentication system using Supabase Auth with reusable middleware, Swagger UI documentation, and proper 401/403 HTTP status distinction.",
-      "Developed a production-grade web scraping pipeline collecting 60 books using Cheerio and Axios with Zod schema validation, exponential backoff, caching (45s → 1s), CSV export, and local AI enrichment via Ollama.",
-      "Migrated backend storage to PostgreSQL in Docker using a repository pattern, orchestrated via Docker Compose with proven data persistence across restarts.",
-      "Engineered a 5-iteration prompt ladder and completed 20 Anthropic Academy certifications covering AI fluency, Claude tooling, MCP, agent skills, subagents, Claude API, Amazon Bedrock, and Google Cloud.",
+      "Built a multi-platform social campaign publisher as first capstone: idempotent publishing, durable BullMQ/Redis scheduler, HMAC-verified webhooks, AES-GCM encrypted OAuth tokens, and rate-limit-aware retry logic.",
+      "Built a SaaS usage metering and billing engine as second capstone: exactly-once metering with idempotency keys, quota enforcement with honest 429/402 responses, AI token cost calculation, and Stripe test mode integration with signature-verified webhooks.",
+      "Built a production REST API with 12 endpoints, SQLite persistence, 23 automated tests at 100% pass rate, then migrated to PostgreSQL in Docker using a clean repository pattern.",
+      "Implemented JWT authentication via Supabase Auth with reusable middleware and Swagger UI, and built a web scraping pipeline with Zod validation, caching (45s → 1s), and Ollama AI enrichment.",
+      "Engineered a 5-iteration prompt ladder and completed 20 Anthropic Academy certifications covering AI fluency, Claude tooling, MCP, agent skills, Amazon Bedrock, and Google Cloud.",
     ],
   },
   {

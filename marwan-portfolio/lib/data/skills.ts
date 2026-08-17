@@ -1,7 +1,7 @@
 export const skills = [
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs", "JWT", "Middleware", "Supabase Auth", "Swagger UI"],
+    items: ["Node.js", "Express.js", "REST APIs", "JWT", "Middleware", "Supabase Auth", "Swagger UI", "BullMQ"],
   },
   {
     category: "Languages",
@@ -9,7 +9,7 @@ export const skills = [
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "SQLite", "MongoDB", "Microsoft SQL Server", "Schema Design", "Query Optimization"],
+    items: ["PostgreSQL", "SQLite", "MongoDB", "Microsoft SQL Server", "Redis", "Schema Design", "Query Optimization"],
   },
   {
     category: "AI & ML",
@@ -17,22 +17,22 @@ export const skills = [
   },
   {
     category: "Security",
-    items: ["3DES", "RSA", "Diffie-Hellman", "AES", "Cryptographic Protocols", "SQL Injection Prevention"],
+    items: ["AES-GCM", "HMAC", "3DES", "RSA", "Diffie-Hellman", "OAuth", "Stripe Webhooks", "SQL Injection Prevention"],
+  },
+  {
+    category: "Reliability & Payments",
+    items: ["Idempotency", "Durable Scheduling", "Rate Limit Handling", "Retry Logic", "Quota Enforcement", "Stripe", "Token Pricing"],
   },
   {
     category: "Data & Scraping",
-    items: ["Cheerio", "Axios", "Zod", "pandas", "scikit-learn", "matplotlib", "Jupyter Notebook"],
+    items: ["Cheerio", "Axios", "Zod", "Sharp", "pandas", "scikit-learn", "matplotlib", "Jupyter Notebook"],
   },
   {
-    category: "DevOps",
-    items: ["Docker", "Docker Compose", "Git", "GitHub", "GitLab", "CI/CD"],
+    category: "DevOps & Frameworks",
+    items: ["Docker", "Docker Compose", "Git", "GitHub", "GitLab", "React.js", "JavaFX", "Unity", ".NET"],
   },
   {
-    category: "Frameworks & Distributed",
-    items: ["React.js", "JavaFX", "Unity", ".NET", "MapReduce", "Weak Consistency", "Distributed Locking"],
-  },
-  {
-    category: "Testing & Soft Skills",
-    items: ["Automated Testing", "Postman", "API Validation", "Agile", "Scrum", "Leadership"],
+    category: "Distributed & Testing",
+    items: ["MapReduce", "Weak Consistency", "Distributed Locking", "Automated Testing", "Postman", "Agile", "Scrum"],
   },
 ];
