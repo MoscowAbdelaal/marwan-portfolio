@@ -4,58 +4,92 @@ import { knowledgeBase } from "@/lib/data/knowledge";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
-// ---------- Local fallback (same smart answers as before) ----------
 function getLocalReply(message: string): string {
   const lower = message.toLowerCase().trim();
 
+  // ===== Opinion / subjective =====
+  if (lower.includes("smart") || lower.includes("intelligent") || lower.includes("clever")) {
+    return "Yeah, he seems solid. He’s shipped real production systems and has good backend + AI experience.";
+  }
+
+  if (lower.includes("think of") || lower.includes("opinion") || lower.includes("what do you think")) {
+    return "He seems capable. Good mix of backend, AI, and real production work.";
+  }
+
+  if (lower.includes("company") || lower.includes("asset") || lower.includes("hire") || lower.includes("join")) {
+    return "From what I can see, yes — he has solid production experience and ships real systems.";
+  }
+
+  if (lower.includes("good") || lower.includes("capable") || lower.includes("strong")) {
+    return "He looks capable. He’s already building production-grade systems at FlyRank.";
+  }
+
+  // ===== Basic identity =====
   if (
     lower.includes("who is marwan") ||
     lower.includes("about marwan") ||
     lower.includes("who are you") ||
     lower.includes("introduce")
   ) {
-    return `Marwan Abdelaal is a Backend & Full-Stack Developer and AI Engineering Intern based in Cairo, Egypt. He is a Software Engineering student at GIU with a Minor in IT Security and currently interns at FlyRank AI. He holds 20 Anthropic Academy certifications.`;
+    return "Marwan is a Software Engineering student at GIU and a Backend AI Engineering Intern at FlyRank AI.";
   }
 
-  if (lower.includes("project") || lower.includes("built") || lower.includes("portfolio")) {
-    return `Marwan has built several projects including:
+  // ===== Projects =====
+  if (lower.includes("project") || lower.includes("built") || lower.includes("work")) {
+    return "He’s built a billing engine, a social campaign publisher, GIU Nexus, a production API, a Java game, and some ML and distributed systems projects.";
+  }
 
-• GIU Nexus (AI-powered MERN platform, team lead of 10)
-• Production REST API & Scraping Pipeline (FlyRank)
-• Clash of Clans: Heroes (Java game)
-• HRMS, Cryptography Suite, Machine Learning models, Distributed Systems, and a Unity experience
+  if (lower.includes("billing") || lower.includes("metering")) {
+    return "That’s one of his FlyRank capstones — a usage metering and billing system with Stripe and exactly-once processing.";
+  }
 
-Ask about any specific project for more details.`;
+  if (lower.includes("social") || lower.includes("campaign") || lower.includes("publisher")) {
+    return "Another FlyRank capstone. It’s a multi-platform social campaign publisher with idempotent publishing and secure webhooks.";
   }
 
   if (lower.includes("giu nexus") || lower.includes("nexus")) {
-    return `GIU Nexus is an AI-powered career platform. Marwan led a team of 10 to build it with React, Node.js, MongoDB, and Hugging Face for skill extraction and recommendations.`;
+    return "GIU Nexus is an AI-powered career platform. He led a team of 10 to build it with the MERN stack and Hugging Face.";
   }
 
+  if (lower.includes("clash") || lower.includes("game")) {
+    return "It’s a 2-player strategy game he built from scratch in Java and JavaFX.";
+  }
+
+  // ===== Experience =====
   if (lower.includes("flyrank") || lower.includes("intern")) {
-    return `At FlyRank AI, Marwan built production REST APIs, JWT authentication, a web scraping pipeline with Ollama, and migrated the backend to PostgreSQL + Docker. He also completed 20 Anthropic certifications.`;
+    return "He’s currently interning at FlyRank as a Backend AI Engineering Intern. He built two main capstones there.";
   }
 
+  if (lower.includes("teaching") || lower.includes("assistant") || lower.includes("ta")) {
+    return "He worked as a Teaching Assistant and helped students in lab sessions.";
+  }
+
+  // ===== Skills & Education =====
   if (lower.includes("skill") || lower.includes("tech") || lower.includes("stack")) {
-    return `Main skills: Node.js, Express, PostgreSQL, Docker, JWT, Python, React, Hugging Face, Ollama, Prompt Engineering, cryptography, and distributed systems.`;
+    return "Mainly Node.js, Express, PostgreSQL, Redis, Docker, BullMQ, Python, React, and some AI tools.";
   }
 
   if (lower.includes("certif") || lower.includes("anthropic") || lower.includes("claude")) {
-    return `Marwan holds 20 Anthropic Academy certifications covering AI Fluency, Claude tooling, Agent Skills, Subagents, Model Context Protocol, and more (Jul–Aug 2026).`;
+    return "He has 20 Anthropic Academy certifications.";
   }
 
-  if (lower.includes("contact") || lower.includes("email") || lower.includes("reach") || lower.includes("phone")) {
-    return `You can reach Marwan at marwan.abdelaal@outlook.com or via LinkedIn: linkedin.com/in/marwan-abdelaal`;
+  if (lower.includes("education") || lower.includes("study") || lower.includes("giu") || lower.includes("university") || lower.includes("student")) {
+    return "He’s a 3rd-year Software Engineering student at GIU with a minor in IT Security.";
   }
 
-  if (lower.includes("education") || lower.includes("study") || lower.includes("giu") || lower.includes("university")) {
-    return `Marwan is a Software Engineering student at the German International University (GIU) in Cairo, with a Minor in IT Security.`;
+  // ===== Contact =====
+  if (lower.includes("contact") || lower.includes("email") || lower.includes("reach") || lower.includes("phone") || lower.includes("linkedin")) {
+    return "You can reach him at marwan.abdelaal@outlook.com or on LinkedIn.";
+  }
+
+  // ===== Unknown =====
+  if (lower.includes("old") || lower.includes("age") || lower.includes("salary") || lower.includes("live")) {
+    return "I don't have that information in Marwan's verified portfolio.";
   }
 
   return "I don't have that information in Marwan's verified portfolio.";
 }
 
-// ---------- Main handler ----------
 export async function POST(req: NextRequest) {
   try {
     const { message } = await req.json();
@@ -64,57 +98,63 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Message is required" }, { status: 400 });
     }
 
-    // Try Gemini first
+    const lower = message.toLowerCase();
+
+    // Force short local answers for opinion questions
+    const isOpinion =
+      lower.includes("smart") ||
+      lower.includes("think of") ||
+      lower.includes("opinion") ||
+      lower.includes("company") ||
+      lower.includes("asset") ||
+      lower.includes("hire") ||
+      lower.includes("good") ||
+      lower.includes("capable");
+
+    if (isOpinion) {
+      return NextResponse.json({ reply: getLocalReply(message) });
+    }
+
+    // Try Gemini for factual questions
     if (process.env.GEMINI_API_KEY) {
       try {
         const model = genAI.getGenerativeModel({
           model: "gemini-3.1-flash-lite",
         });
 
-        const systemPrompt = `You are Moscow AI, a personal assistant for Marwan Abdelaal.
+        const systemPrompt = `You are Moscow AI.
+Answer in maximum 1 short sentence.
+Be casual and natural.
+Only use the information below.
+If you don't know, say you don't have that information.
 
-Rules:
-- Answer ONLY using the verified information below.
-- If the information is not available, say: "I don't have that information in Marwan's verified portfolio."
-- Keep answers short and easy to read.
-- Use simple language.
-- Prefer short paragraphs or a few clear bullet points.
-- Do not invent any information.
-
-Verified information:
 ${knowledgeBase}`;
 
-        const result = await model.generateContent([
-          { text: systemPrompt },
-          { text: `User question: ${message}` },
-        ]);
-
+        const result = await model.generateContent(message);
         let reply = result.response.text()?.trim() || "";
+
         reply = reply
-          .replace(/\*\*(.*?)\*\*/g, "$1")   // remove **bold**
-          .replace(/\*(.*?)\*/g, "$1")       // remove *italic*
-          .replace(/`(.*?)`/g, "$1")         // remove `code`
-          .replace(/^#+\s*/gm, "")           // remove headings
-          .replace(/^\s*[-•*]\s*/gm, "• ")   // normalize bullets
+          .replace(/\*\*(.*?)\*\*/g, "$1")
+          .replace(/\*(.*?)\*/g, "$1")
+          .replace(/`(.*?)`/g, "$1")
           .trim();
+
+        if (reply.split(" ").length > 22) {
+          reply = reply.split(".")[0] + ".";
+        }
 
         if (reply) {
           return NextResponse.json({ reply });
         }
-      } catch (geminiError: any) {
-        console.warn("Gemini failed, using local fallback:", geminiError?.message);
-        // Fall through to local reply
+      } catch (err: any) {
+        console.warn("Gemini failed:", err?.message);
       }
     }
 
-    // Fallback to local answers
-    const localReply = getLocalReply(message);
-    return NextResponse.json({ reply: localReply });
+    // Fallback
+    return NextResponse.json({ reply: getLocalReply(message) });
   } catch (error) {
     console.error(error);
-    return NextResponse.json(
-      { reply: "Sorry, something went wrong." },
-      { status: 500 }
-    );
+    return NextResponse.json({ reply: "Sorry, something went wrong." }, { status: 500 });
   }
 }
