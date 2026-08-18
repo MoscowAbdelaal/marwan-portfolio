@@ -14,7 +14,6 @@ Name: ${profile.name}
 Title: ${profile.title}
 Location: ${profile.location}
 Email: ${profile.email}
-Phone: ${profile.phone}
 LinkedIn: ${profile.linkedin}
 GitHub: ${profile.github}
 Summary: ${profile.summary}
