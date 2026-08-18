@@ -1,4 +1,6 @@
 import { profile } from "@/lib/data/profile";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -17,24 +19,27 @@ export default function Contact() {
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
           <a
             href={`mailto:${profile.email}`}
-            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base"
+            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base inline-flex items-center gap-2"
           >
+            <MdEmail className="w-4 h-4" />
             Email
           </a>
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base"
+            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base inline-flex items-center gap-2"
           >
+            <FaLinkedin className="w-4 h-4" />
             LinkedIn
           </a>
           <a
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base"
+            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base inline-flex items-center gap-2"
           >
+            <FaGithub className="w-4 h-4" />
             GitHub
           </a>
         </div>

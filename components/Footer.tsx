@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { profile } from "@/lib/data/profile";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -17,22 +19,25 @@ export default function Footer() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-zinc-100 transition"
+            className="hover:text-zinc-100 transition flex items-center gap-1.5"
           >
+            <FaGithub className="w-4 h-4" />
             GitHub
           </a>
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-zinc-100 transition"
+            className="hover:text-zinc-100 transition flex items-center gap-1.5"
           >
+            <FaLinkedin className="w-4 h-4" />
             LinkedIn
           </a>
           <a
             href={`mailto:${profile.email}`}
-            className="hover:text-zinc-100 transition"
+            className="hover:text-zinc-100 transition flex items-center gap-1.5"
           >
+            <MdEmail className="w-4 h-4" />
             Email
           </a>
         </div>

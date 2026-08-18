@@ -1,4 +1,6 @@
 import { projects } from "@/lib/data/projects";
+import { FaGithub } from "react-icons/fa";
+import { MdOpenInNew } from "react-icons/md";
 
 export default function Projects() {
   return (
@@ -58,9 +60,11 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-zinc-500 hover:text-zinc-200 transition inline-flex items-center gap-1"
+                  className="text-sm text-zinc-500 hover:text-zinc-200 transition inline-flex items-center gap-1.5"
                 >
-                  View on GitHub →
+                  <FaGithub className="w-4 h-4" />
+                  View on GitHub
+                  <MdOpenInNew className="w-3 h-3" />
                 </a>
               ) : (
                 <span className="text-sm text-zinc-600">Private / Academic</span>

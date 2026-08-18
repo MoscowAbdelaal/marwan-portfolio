@@ -27,6 +27,8 @@ export default function Hero() {
           {profile.title}
         </p>
 
+        {/* Social Icons REMOVED */}
+
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link
             href="#agent"
@@ -44,7 +46,7 @@ export default function Hero() {
             href="/cv/Marwan_Abdelaal_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 rounded-full border border-white/20 text-white hover:bg-white/5 transition text-center text-sm sm:text-base"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 rounded-full border border-white/20 text-white hover:bg-white/5 transition text-center text-sm sm:text-base flex items-center justify-center gap-2"
           >
             Download CV
           </a>

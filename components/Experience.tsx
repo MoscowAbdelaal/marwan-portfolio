@@ -1,4 +1,5 @@
 import { experience } from "@/lib/data/experience";
+import { Briefcase } from "lucide-react";
 
 export default function Experience() {
   return (
@@ -18,18 +19,21 @@ export default function Experience() {
             <div key={job.id} className="relative pl-4 sm:pl-6 border-l border-zinc-800">
               <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500" />
 
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+              <div className="flex items-center gap-2 mb-1">
+                <Briefcase className="w-4 h-4 text-blue-400" />
                 <h3 className="text-base sm:text-lg font-semibold text-zinc-50">
                   {job.role}
                 </h3>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <p className="text-blue-400 text-xs sm:text-sm">
+                  {job.company} · {job.location}
+                </p>
                 <span className="text-xs sm:text-sm text-zinc-500">{job.period}</span>
               </div>
 
-              <p className="text-blue-400 text-xs sm:text-sm mb-3 sm:mb-4">
-                {job.company} · {job.location}
-              </p>
-
-              <ul className="space-y-2">
+              <ul className="space-y-2 mt-3 sm:mt-4">
                 {job.points.slice(0, 5).map((point, i) => (
                   <li
                     key={i}
