@@ -32,7 +32,7 @@ export default function About() {
         <div className="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
           {[
             { label: "GIU", value: "Software Engineering" },
-            { label: "FlyRank AI", value: "AI Engineering Intern" },
+            { label: "FlyRank AI", value: "Backend AI Engineering Intern" },
             { label: "20", value: "Anthropic Certifications" },
             { label: "Cairo", value: "Based in Egypt" },
           ].map((item) => (
