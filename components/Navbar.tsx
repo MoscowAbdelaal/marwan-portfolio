@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Code2 } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,13 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight text-zinc-50 text-sm sm:text-base">
-          <Code2 className="w-5 h-5 text-blue-400" />
+          <Image
+            src="/favicon.svg"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="w-5 h-5 sm:w-6 sm:h-6"
+          />
           MARWAN ABDELAAL
         </Link>
 
