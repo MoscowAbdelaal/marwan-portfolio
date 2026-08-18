@@ -22,12 +22,6 @@ export default function Contact() {
             Email
           </a>
           <a
-            href={`tel:${profile.phone}`}
-            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm sm:text-base"
-          >
-            Phone
-          </a>
-          <a
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"

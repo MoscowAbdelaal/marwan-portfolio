@@ -3,7 +3,6 @@ export const profile = {
   title: "Backend & Full-Stack Developer | Backend AI Engineering Intern | Software Engineering Student",
   location: "Cairo, Egypt",
   email: "marwan.abdelaal@outlook.com",
-  phone: "+201111210005",
   linkedin: "https://linkedin.com/in/marwan-abdelaal",
   github: "https://github.com/MoscowAbdelaal",
   summary:
