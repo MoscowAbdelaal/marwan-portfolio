@@ -36,6 +36,15 @@ export const projects = [
     highlight: "100% test pass rate · Production-ready",
   },
   {
+    id: "flyrank-background-jobs",
+    title: "Background Jobs with Inngest",
+    description:
+      "An Express API that offloads slow work to background jobs with Inngest. Demonstrates fast API responses (202 Accepted), status polling, automatic retries on failure, and scheduled cron jobs for routine tasks. Built as a FlyRank AI internship project.",
+    tech: ["Node.js", "Express", "Inngest", "TypeScript", "Cron"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-background-jobs",
+    highlight: "FlyRank AI · Background Jobs + Cron",
+  },
+  {
     id: "web-scraping",
     title: "Web Scraping Pipeline with AI Enrichment",
     description:
