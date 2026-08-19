@@ -12,6 +12,7 @@ export default function Navbar() {
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
+    { href: "#certifications", label: "Certifications" },
     { href: "#agent", label: "Moscow AI" },
     { href: "#future", label: "Future" },
     { href: "#contact", label: "Contact" },
