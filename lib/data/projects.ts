@@ -36,13 +36,31 @@ export const projects = [
     highlight: "100% test pass rate · Production-ready",
   },
   {
-    id: "flyrank-background-jobs",
+    id: "background-jobs",
     title: "Background Jobs with Inngest",
     description:
       "An Express API that offloads slow work to background jobs with Inngest. Demonstrates fast API responses (202 Accepted), status polling, automatic retries on failure, and scheduled cron jobs for routine tasks. Built as a FlyRank AI internship project.",
     tech: ["Node.js", "Express", "Inngest", "TypeScript", "Cron"],
     github: "https://github.com/MoscowAbdelaal/flyrank-background-jobs",
     highlight: "FlyRank AI · Background Jobs + Cron",
+  },
+  {
+    id: "pdf-report-generator",
+    title: "PDF Report Generator",
+    description:
+      "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
+    tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-pdf-report-generator",
+    highlight: "FlyRank AI · PDF Generation + Idempotency",
+  },
+  {
+    id: "ai-decision-flow",
+    title: "AI Decision Flow with React Flow & Inngest",
+    description:
+      "A full-stack application for visualizing and managing AI decision-making processes. Uses React Flow for an interactive flowchart interface and Inngest for durable background job processing.",
+    tech: ["React", "React Flow", "Node.js", "Inngest", "TypeScript"],
+    github: "https://github.com/MoscowAbdelaal/ai-decision-flow",
+    highlight: "React Flow · Inngest · Full-Stack AI",
   },
   {
     id: "web-scraping",
