@@ -1,4 +1,15 @@
 export const projects = [
+  // ===== FLYRANK CAPSTONES (Top Priority) =====
+  {
+    id: "ai-meeting-assistant",
+    title: "AI Meeting Assistant – FlyRank 10x Capstone",
+    description:
+      "A full-stack application that extracts summaries, decisions, and action items from meeting transcripts using AI. Features user authentication, PDF reporting, 24-hour caching for AI results, and automated daily reminders for overdue tasks. Built as a 7-concept FlyRank capstone and deployed live.",
+    tech: ["React", "Node.js", "Express", "Supabase", "Gemini API", "pdfmake", "node-cron"],
+    github: "https://github.com/MoscowAbdelaal/ai-meeting-assistant",
+    live: "https://ai-meeting-assistant-frontend-h2po.onrender.com",
+    highlight: "FlyRank 10x Capstone · Live Deployment",
+  },
   {
     id: "billing-engine",
     title: "Usage Metering and Billing Engine",
@@ -17,41 +28,25 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/flyrank-capstone-social-studio.git",
     highlight: "FlyRank Capstone · Idempotency + Security",
   },
+
+  // ===== LIVE DEPLOYED PROJECTS =====
   {
-    id: "giu-nexus",
-    title: "GIU Nexus – AI-Powered Career & Talent Platform",
+    id: "pdf-report-generator",
+    title: "PDF Report Generator – FlyRank AI",
     description:
-      "Led a team of 10 to build a full-stack MERN application with Hugging Face NLP for skill extraction and zero-shot classification, cosine similarity recommendations, JWT authentication, and webhook-based notifications.",
-    tech: ["React (Vite)", "Node.js", "Express", "MongoDB", "Hugging Face", "JWT"],
-    github: "https://github.com/MoscowAbdelaal/GIU-Nexus",
-    highlight: "Team lead · 10 people · Full MERN + AI",
+      "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
+    tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-pdf-report-generator",
+    highlight: "FlyRank AI · PDF Generation + Idempotency",
   },
   {
-    id: "crud-api",
-    title: "Production REST API with Auth & Testing",
-    description:
-      "Full REST API with 12 endpoints, persistent SQLite then PostgreSQL in Docker, 23 automated tests at 100% pass rate, JWT auth via Supabase, reusable middleware, and Swagger UI documentation.",
-    tech: ["Node.js", "Express", "PostgreSQL", "Docker", "Supabase Auth", "JWT", "Swagger UI"],
-    github: "https://github.com/MoscowAbdelaal/crud-api",
-    highlight: "100% test pass rate · Production-ready",
-  },
-  {
-    id: "background-jobs",
+    id: "flyrank-background-jobs",
     title: "Background Jobs with Inngest",
     description:
       "An Express API that offloads slow work to background jobs with Inngest. Demonstrates fast API responses (202 Accepted), status polling, automatic retries on failure, and scheduled cron jobs for routine tasks. Built as a FlyRank AI internship project.",
     tech: ["Node.js", "Express", "Inngest", "TypeScript", "Cron"],
     github: "https://github.com/MoscowAbdelaal/flyrank-background-jobs",
     highlight: "FlyRank AI · Background Jobs + Cron",
-  },
-  {
-    id: "pdf-report-generator",
-    title: "PDF Report Generator from SQL Data",
-    description:
-      "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
-    tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
-    github: "https://github.com/MoscowAbdelaal/flyrank-pdf-report-generator",
-    highlight: "FlyRank AI · PDF Generation + Idempotency",
   },
   {
     id: "ai-decision-flow",
@@ -62,15 +57,27 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/ai-decision-flow",
     highlight: "React Flow · Inngest · Full-Stack AI",
   },
+
+  // ===== TEAM LEADERSHIP =====
   {
-    id: "ai-meeting-assistant",
-    title: "AI Meeting Assistant – Summarization & Action Items",
+    id: "giu-nexus",
+    title: "GIU Nexus – AI-Powered Career & Talent Platform",
     description:
-      "Upload meeting transcripts and let AI extract summaries, decisions, and action items. Features user authentication, PDF reporting, 24-hour caching for AI results, and automated daily reminders for overdue tasks. Deployed live.",
-    tech: ["React", "Node.js", "Express", "Supabase", "Gemini API", "pdfmake", "Render.com"],
-    github: "https://github.com/MoscowAbdelaal/ai-meeting-assistant",
-    live: "https://ai-meeting-assistant-frontend-h2po.onrender.com",
-    highlight: "FlyRank 10x Capstone · Live Deployment",
+      "Led a team of 10 to build a full-stack MERN application with Hugging Face NLP for skill extraction and zero-shot classification, cosine similarity recommendations, JWT authentication, and webhook-based notifications.",
+    tech: ["React (Vite)", "Node.js", "Express", "MongoDB", "Hugging Face", "JWT"],
+    github: "https://github.com/MoscowAbdelaal/GIU-Nexus",
+    highlight: "Team lead · 10 people · Full MERN + AI",
+  },
+
+  // ===== PRODUCTION SYSTEMS =====
+  {
+    id: "crud-api",
+    title: "Production REST API with Auth & Testing",
+    description:
+      "Full REST API with 12 endpoints, persistent SQLite then PostgreSQL in Docker, 23 automated tests at 100% pass rate, JWT auth via Supabase, reusable middleware, and Swagger UI documentation.",
+    tech: ["Node.js", "Express", "PostgreSQL", "Docker", "Supabase Auth", "JWT", "Swagger UI"],
+    github: "https://github.com/MoscowAbdelaal/crud-api",
+    highlight: "100% test pass rate · Production-ready",
   },
   {
     id: "web-scraping",
@@ -81,6 +88,8 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/crud-api/tree/main/scraper",
     highlight: "AI-enriched · Caching + retry logic",
   },
+
+  // ===== TECHNICAL DEPTH =====
   {
     id: "clash-of-clans",
     title: "Clash of Clans: Heroes – 2-Player Strategy Game",
@@ -89,15 +98,6 @@ export const projects = [
     tech: ["Java", "JavaFX", "OOP"],
     github: "https://github.com/MoscowAbdelaal/Clash-of-clans-Legends",
     highlight: "Full game engine from scratch",
-  },
-  {
-    id: "hrms",
-    title: "Human Resource Management System (HRMS)",
-    description:
-      "Full EERD and relational schema design with optimized SQL stored procedures for a multi-role system covering payroll, attendance, leave, hiring, and performance reviews.",
-    tech: ["Microsoft SQL Server", "Node.js", "SQL", "Stored Procedures"],
-    github: null,
-    highlight: "Complete database design + backend",
   },
   {
     id: "cryptography",
@@ -125,6 +125,17 @@ export const projects = [
     tech: ["Python", "Google Colab"],
     github: null,
     highlight: "MapReduce + Distributed locking",
+  },
+
+  // ===== ACADEMIC / PERSONAL =====
+  {
+    id: "hrms",
+    title: "Human Resource Management System (HRMS)",
+    description:
+      "Full EERD and relational schema design with optimized SQL stored procedures for a multi-role system covering payroll, attendance, leave, hiring, and performance reviews.",
+    tech: ["Microsoft SQL Server", "Node.js", "SQL", "Stored Procedures"],
+    github: null,
+    highlight: "Complete database design + backend",
   },
   {
     id: "unity",
