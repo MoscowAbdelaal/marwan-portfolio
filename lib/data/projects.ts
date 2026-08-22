@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     id: "pdf-report-generator",
-    title: "PDF Report Generator",
+    title: "PDF Report Generator from SQL Data",
     description:
       "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
     tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
@@ -61,6 +61,16 @@ export const projects = [
     tech: ["React", "React Flow", "Node.js", "Inngest", "TypeScript"],
     github: "https://github.com/MoscowAbdelaal/ai-decision-flow",
     highlight: "React Flow · Inngest · Full-Stack AI",
+  },
+  {
+    id: "ai-meeting-assistant",
+    title: "AI Meeting Assistant – Summarization & Action Items",
+    description:
+      "Upload meeting transcripts and let AI extract summaries, decisions, and action items. Features user authentication, PDF reporting, 24-hour caching for AI results, and automated daily reminders for overdue tasks. Deployed live.",
+    tech: ["React", "Node.js", "Express", "Supabase", "Gemini API", "pdfmake", "Render.com"],
+    github: "https://github.com/MoscowAbdelaal/ai-meeting-assistant",
+    live: "https://ai-meeting-assistant-frontend-h2po.onrender.com",
+    highlight: "FlyRank 10x Capstone · Live Deployment",
   },
   {
     id: "web-scraping",

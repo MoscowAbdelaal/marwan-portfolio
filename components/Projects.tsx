@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { projects } from "@/lib/data/projects";
+import { FaGithub, FaCode } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -36,22 +38,18 @@ export default function Projects() {
     const newShowAll = !showAll;
     
     if (!newShowAll && sectionRef.current) {
-      // Start collapsing and scrolling at the same time
       setIsCollapsing(true);
       setShowAll(false);
       
-      // Calculate scroll position once
       const navbarHeight = 64;
       const sectionTop = sectionRef.current.getBoundingClientRect().top;
       const offsetTop = sectionTop + window.pageYOffset - navbarHeight;
       
-      // Start scrolling immediately (same time as collapse)
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth"
       });
       
-      // Reset collapsing state after animation
       setTimeout(() => {
         setIsCollapsing(false);
       }, 600);
@@ -64,13 +62,14 @@ export default function Projects() {
     <section 
       id="projects" 
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 bg-zinc-900/40 animate-fade-in"
+      className="py-24 px-6 bg-zinc-900/40 animate-fade-in"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
-          <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3">
-            Projects
-          </p>
+          <div className="flex items-center gap-3 justify-center mb-3">
+            <FaCode className="w-4 h-4 text-blue-400" />
+            <p className="text-sm uppercase tracking-widest text-zinc-500">Projects</p>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-50">
             Selected Work
           </h2>
@@ -85,7 +84,7 @@ export default function Projects() {
           }`}
           style={{ height: height }}
         >
-          <div ref={contentRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8 w-full">
+          <div ref={contentRef} className="grid md:grid-cols-2 gap-6 pb-8 w-full">
             {displayProjects.map((project) => (
               <div
                 key={project.id}
@@ -122,18 +121,31 @@ export default function Projects() {
                   )}
                 </div>
 
-                {project.github ? (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-zinc-500 hover:text-zinc-200 transition inline-flex items-center gap-1"
-                  >
-                    View on GitHub →
-                  </a>
-                ) : (
-                  <span className="text-sm text-zinc-600">Private / Academic</span>
-                )}
+                {/* Links: GitHub + Live Demo - same style */}
+                <div className="flex flex-wrap items-center gap-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-zinc-500 hover:text-zinc-200 transition inline-flex items-center gap-1.5"
+                    >
+                      <FaGithub className="w-4 h-4" />
+                      View on GitHub
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-zinc-500 hover:text-zinc-200 transition inline-flex items-center gap-1.5"
+                    >
+                      <FiExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>

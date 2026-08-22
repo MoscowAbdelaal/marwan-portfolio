@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
+
+const LogoMark = () => (
+  <div className="relative w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+    <span className="font-bold text-white text-xl">M</span>
+    <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+  </div>
+);
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,19 +26,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight text-zinc-50 text-sm sm:text-base">
-          <Image
-            src="/favicon.svg"
-            alt="Logo"
-            width={24}
-            height={24}
-            className="w-5 h-5 sm:w-6 sm:h-6"
-          />
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 font-semibold tracking-tight text-zinc-50 text-sm sm:text-base">
+          <LogoMark />
           MARWAN ABDELAAL
         </Link>
 
-        <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm text-zinc-400">
+        <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -47,7 +47,7 @@ export default function Navbar() {
             href="/cv/Marwan_Abdelaal_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 px-3 sm:px-4 py-1.5 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-xs sm:text-sm"
+            className="ml-2 px-4 py-1.5 rounded-full border border-zinc-700 text-zinc-300 hover:bg-zinc-800 transition text-sm"
           >
             Download CV
           </a>
@@ -59,11 +59,11 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           {open ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
@@ -72,13 +72,13 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden border-t border-zinc-800 bg-zinc-950">
-          <div className="flex flex-col px-4 sm:px-6 py-4 space-y-3">
+          <div className="flex flex-col px-6 py-4 space-y-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-zinc-300 hover:text-white transition py-2 text-sm"
+                className="text-zinc-300 hover:text-white transition py-2"
               >
                 {link.label}
               </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="text-zinc-300 hover:text-white transition py-2 text-sm"
+              className="text-zinc-300 hover:text-white transition py-2"
             >
               Download CV
             </a>

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { certifications } from "@/lib/data/certifications";
+import { FaCertificate } from "react-icons/fa";
 
 export default function Certifications() {
   const [showAll, setShowAll] = useState(false);
@@ -36,7 +37,6 @@ export default function Certifications() {
     const newShowAll = !showAll;
     
     if (!newShowAll && sectionRef.current) {
-      // Start collapsing and scrolling at the same time
       setIsCollapsing(true);
       setShowAll(false);
       
@@ -64,15 +64,18 @@ export default function Certifications() {
       className="py-24 px-6 animate-fade-in"
     >
       <div className="max-w-4xl mx-auto">
-        <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3 text-center">
-          Certifications
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-50 text-center">
-          Anthropic Academy
-        </h2>
-        <p className="text-zinc-400 mb-12 max-w-2xl mx-auto text-center">
-          {certifications.length} Anthropic Academy certifications focused on AI fluency, Claude tooling, agents, MCP, and subagents.
-        </p>
+        <div className="text-center">
+          <div className="flex items-center gap-3 justify-center mb-3">
+            <FaCertificate className="w-4 h-4 text-blue-400" />
+            <p className="text-sm uppercase tracking-widest text-zinc-500">Certifications</p>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-50">
+            Anthropic Academy
+          </h2>
+          <p className="text-zinc-400 mb-12 max-w-2xl mx-auto">
+            {certifications.length} Anthropic Academy certifications focused on AI fluency, Claude tooling, agents, MCP, and subagents.
+          </p>
+        </div>
 
         <div 
           className={`overflow-hidden transition-[height] duration-500 ease-in-out ${
