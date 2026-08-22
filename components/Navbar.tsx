@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
-const LogoMark = () => (
-  <div className="relative w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-    <span className="font-bold text-white text-xl">M</span>
-    <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
-  </div>
-);
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,7 +22,14 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 font-semibold tracking-tight text-zinc-50 text-sm sm:text-base">
-          <LogoMark />
+          {/* Original SVG Logo */}
+          <Image
+            src="/favicon.svg"
+            alt="Logo"
+            width={28}
+            height={28}
+            className="w-7 h-7"
+          />
           MARWAN ABDELAAL
         </Link>
 
