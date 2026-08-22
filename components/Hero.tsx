@@ -8,6 +8,35 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-zinc-950" />
 
+      {/* Floating Social Icons - Bottom Right */}
+      <div className="absolute bottom-8 right-6 sm:right-8 flex flex-col gap-3 z-20">
+        <a
+          href={profile.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 transition border border-white/10"
+          aria-label="GitHub"
+        >
+          <FaGithub className="w-4 h-4 text-white/50 hover:text-white transition" />
+        </a>
+        <a
+          href={profile.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 transition border border-white/10"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin className="w-4 h-4 text-white/50 hover:text-white transition" />
+        </a>
+        <a
+          href={`mailto:${profile.email}`}
+          className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 transition border border-white/10"
+          aria-label="Email"
+        >
+          <MdEmail className="w-4 h-4 text-white/50 hover:text-white transition" />
+        </a>
+      </div>
+
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-white/70 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -28,35 +57,6 @@ export default function Hero() {
         <p className="mt-3 text-base text-white/40">
           {profile.title}
         </p>
-
-        {/* Social Icons - Hero specific */}
-        <div className="mt-6 flex items-center justify-center gap-4">
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition border border-white/10"
-            aria-label="GitHub"
-          >
-            <FaGithub className="w-5 h-5 text-white/80" />
-          </a>
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition border border-white/10"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin className="w-5 h-5 text-white/80" />
-          </a>
-          <a
-            href={`mailto:${profile.email}`}
-            className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition border border-white/10"
-            aria-label="Email"
-          >
-            <MdEmail className="w-5 h-5 text-white/80" />
-          </a>
-        </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
