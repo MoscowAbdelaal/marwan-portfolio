@@ -6,6 +6,8 @@ export const experience = [
     period: "Jun 2026 – Present",
     location: "Remote",
     points: [
+      "Built an embeddable widget platform as capstone: full-stack widget management, CORS-hardened public submission API with rate limiting, spam detection, geo enrichment fallback chain, versioned production bundle, real-time dashboard via SSE, targeting rules, and proof-of-work CAPTCHA.",
+      "Built an AI Meeting Assistant as 10x capstone: full-stack app with React/Node.js/Express/Supabase that extracts summaries, decisions, and action items from meeting transcripts using Gemini 3.1 Flash Lite. Features PDF reporting, 24-hour caching for AI results, and automated daily reminders for overdue tasks. Deployed live on Render.com.",
       "Built a multi-platform social campaign publisher as first capstone: idempotent publishing, durable BullMQ/Redis scheduler, HMAC-verified webhooks, AES-GCM encrypted OAuth tokens, and rate-limit-aware retry logic.",
       "Built a SaaS usage metering and billing engine as second capstone: exactly-once metering with idempotency keys, quota enforcement with honest 429/402 responses, AI token cost calculation, and Stripe test mode integration with signature-verified webhooks.",
       "Built a production REST API with 12 endpoints, SQLite persistence, 23 automated tests at 100% pass rate, then migrated to PostgreSQL in Docker using a clean repository pattern.",
