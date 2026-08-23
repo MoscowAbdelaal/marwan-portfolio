@@ -1,8 +1,17 @@
 export const projects = [
-  // ===== FLYRANK CAPSTONES (Top Priority) =====
+  // ===== LATEST CAPSTONE — EMBEDDABLE WIDGET PLATFORM =====
+  {
+    id: "widget-platform",
+    title: "Embeddable Widget Platform – Signup Forms, CTAs, Popovers",
+    description:
+      "A platform that lets customers create signup forms, CTAs, and popovers — then install them on any website with a single <script> tag. Handles rendering, validation, rate limiting, spam detection, geo enrichment, GDPR compliance, and real-time dashboard updates. Production bundle with versioning, targeting rules, and proof-of-work CAPTCHA.",
+    tech: ["Node.js", "Express", "PostgreSQL", "SSE", "Docker", "CORS", "Rate Limiting"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-widget-platform",
+    highlight: "FlyRank Capstone · Embeddable Widgets · 7 Concepts",
+  },
   {
     id: "ai-meeting-assistant",
-    title: "AI Meeting Assistant – FlyRank 10x Capstone",
+    title: "AI Meeting Assistant – Summarization & Action Items",
     description:
       "A full-stack application that extracts summaries, decisions, and action items from meeting transcripts using AI. Features user authentication, PDF reporting, 24-hour caching for AI results, and automated daily reminders for overdue tasks. Built as a 7-concept FlyRank capstone and deployed live.",
     tech: ["React", "Node.js", "Express", "Supabase", "Gemini API", "pdfmake", "node-cron"],
@@ -28,11 +37,9 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/flyrank-capstone-social-studio.git",
     highlight: "FlyRank Capstone · Idempotency + Security",
   },
-
-  // ===== LIVE DEPLOYED PROJECTS =====
   {
     id: "pdf-report-generator",
-    title: "PDF Report Generator – FlyRank AI",
+    title: "PDF Report Generator with Parameterized Queries",
     description:
       "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
     tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
@@ -57,8 +64,6 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/ai-decision-flow",
     highlight: "React Flow · Inngest · Full-Stack AI",
   },
-
-  // ===== TEAM LEADERSHIP =====
   {
     id: "giu-nexus",
     title: "GIU Nexus – AI-Powered Career & Talent Platform",
@@ -68,8 +73,6 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/GIU-Nexus",
     highlight: "Team lead · 10 people · Full MERN + AI",
   },
-
-  // ===== PRODUCTION SYSTEMS =====
   {
     id: "crud-api",
     title: "Production REST API with Auth & Testing",
@@ -88,8 +91,6 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/crud-api/tree/main/scraper",
     highlight: "AI-enriched · Caching + retry logic",
   },
-
-  // ===== TECHNICAL DEPTH =====
   {
     id: "clash-of-clans",
     title: "Clash of Clans: Heroes – 2-Player Strategy Game",
@@ -126,8 +127,6 @@ export const projects = [
     github: null,
     highlight: "MapReduce + Distributed locking",
   },
-
-  // ===== ACADEMIC / PERSONAL =====
   {
     id: "hrms",
     title: "Human Resource Management System (HRMS)",
