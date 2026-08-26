@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Personal Portfolio
 
-## Getting Started
+**What it does**  
+This is my personal portfolio website built during the FlyRank General AI Fluency track. It collects and presents the real work I completed over the ten weeks — projects, workflows, experiments, and reflections — in one clean public place. Instead of telling people I can work with AI, I can now just send them a link.
 
-First, run the development server:
+**Who it’s for**  
+University reviewers, potential employers, mentors, and other builders who want to see concrete proof of my AI fluency work.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Setup (so a stranger can run it)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/[your-username]/[your-repo-name].git
+   cd [your-repo-name]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependenciesBashnpm install
+Run the development serverBashnpm run dev
+Open http://localhost:3000 in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No environment variables are required for the basic version.
+Usage Examples
 
-## Learn More
+Open the homepage to get an overview of my AI Fluency journey and featured work.
+Navigate to the Projects section to view individual case studies and outcomes.
+Use the Process / Workflow section to see how I actually work with AI tools day to day.
+On mobile the layout adapts so all content remains readable and usable.
 
-To learn more about Next.js, take a look at the following resources:
+Simple Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Frontend: Next.js + React
+Styling: Tailwind CSS
+Content: Static pages and markdown for project write-ups
+Hosting: Deployed on Vercel
+No backend required for the core experience
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Evaluation Results (v2)
+Metric,Result,Notes
+Load time (mobile),Under 2.5s,Tested on mid-range Android and iPhone
+Navigation clarity,High,Users found projects in under 10 seconds
+Mobile responsiveness,Fully working,Tested across common screen sizes
+Content completeness,Complete,All required track deliverables are linked
 
-## Deploy on Vercel
+Most projects are presented as case studies with screenshots rather than fully interactive live demos.
+Video walkthroughs are not yet available for every project.
+The visual design is clean but intentionally simple — advanced animations are minimal.
+There is currently no search or filtering across projects.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AI Transparency
+I built this portfolio with significant help from AI tools, primarily Claude and ChatGPT, and occasionally Cursor.
+AI assisted with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Generating initial component structure and layout ideas
+Drafting and refining written content
+Debugging styling and responsive issues
+Suggesting information architecture improvements
+
+I personally:
+
+Made all final design and content decisions
+Wrote and heavily edited the project descriptions and reflections
+Tested the site thoroughly on multiple devices
+Decided what to include and what to leave out
+
+The site reflects my actual work and judgment. AI accelerated the process but did not replace it.
