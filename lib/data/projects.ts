@@ -1,14 +1,16 @@
 export const projects = [
-  // ===== LATEST CAPSTONE — EMBEDDABLE WIDGET PLATFORM =====
+  // ===== #1 — AI IMAGE UNDERSTANDING (Most Impressive) =====
   {
-    id: "widget-platform",
-    title: "Embeddable Widget Platform – Signup Forms, CTAs, Popovers",
+    id: "image-understanding",
+    title: "AI Image Understanding & Content Matching Engine",
     description:
-      "A platform that lets customers create signup forms, CTAs, and popovers — then install them on any website with a single <script> tag. Handles rendering, validation, rate limiting, spam detection, geo enrichment, GDPR compliance, and real-time dashboard updates. Production bundle with versioning, targeting rules, and proof-of-work CAPTCHA.",
-    tech: ["Node.js", "Express", "PostgreSQL", "SSE", "Docker", "CORS", "Rate Limiting"],
-    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-widget-platform",
-    highlight: "FlyRank Capstone · Embeddable Widgets · 7 Concepts",
+      "An AI-powered system that automatically tags images and matches them to articles with a mismatch guard that rejects wrong matches. Images are processed through Gemini Flash to extract subject, category, attributes, caption, and confidence score. The mismatch guard combines tag validation, semantic similarity, and confidence thresholds to decide if a match is good enough — rejecting incorrect pairings with human-readable explanations. All vision processing runs as background jobs with retries and per-call cost tracking.",
+    tech: ["Node.js", "Express", "PostgreSQL", "Gemini API", "Zod", "Docker", "Background Jobs"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-image-relevance",
+    highlight: "FlyRank Capstone · AI Vision · Mismatch Guard",
   },
+
+  // ===== #2 — AI MEETING ASSISTANT (Live Deployment) =====
   {
     id: "ai-meeting-assistant",
     title: "AI Meeting Assistant – Summarization & Action Items",
@@ -19,42 +21,19 @@ export const projects = [
     live: "https://ai-meeting-assistant-frontend-h2po.onrender.com",
     highlight: "FlyRank 10x Capstone · Live Deployment",
   },
+
+  // ===== #3 — EMBEDDABLE WIDGET PLATFORM (Complete SaaS) =====
   {
-    id: "billing-engine",
-    title: "Usage Metering and Billing Engine",
+    id: "widget-platform",
+    title: "Embeddable Widget Platform – Signup Forms, CTAs, Popovers",
     description:
-      "SaaS usage metering and billing engine with exactly-once metering using idempotency keys, quota enforcement (honest 429/402 responses), AI token cost calculation with cached/reasoning token pricing, and Stripe test mode integration with signature-verified deduplicating webhooks.",
-    tech: ["Node.js", "Express", "PostgreSQL", "Redis", "Stripe", "BullMQ", "Idempotency"],
-    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-metering-billing.git",
-    highlight: "FlyRank Capstone · Stripe + Exactly-once",
+      "A platform that lets customers create signup forms, CTAs, and popovers — then install them on any website with a single <script> tag. Handles rendering, validation, rate limiting, spam detection, geo enrichment, GDPR compliance, and real-time dashboard updates. Production bundle with versioning, targeting rules, and proof-of-work CAPTCHA.",
+    tech: ["Node.js", "Express", "PostgreSQL", "SSE", "Docker", "CORS", "Rate Limiting"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-widget-platform",
+    highlight: "FlyRank Capstone · Embeddable Widgets · 7 Concepts",
   },
-  {
-    id: "social-publisher",
-    title: "Multi-Platform Social Campaign Publisher",
-    description:
-      "Idempotent multi-platform social campaign publisher with durable BullMQ/Redis scheduler, HMAC-verified webhooks that reject forgeries with 400, AES-GCM encrypted OAuth tokens, and rate-limit-aware retry logic with backoff.",
-    tech: ["Node.js", "BullMQ", "Redis", "HMAC", "AES-GCM", "OAuth"],
-    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-social-studio.git",
-    highlight: "FlyRank Capstone · Idempotency + Security",
-  },
-  {
-    id: "pdf-report-generator",
-    title: "PDF Report Generator with Parameterized Queries",
-    description:
-      "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
-    tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
-    github: "https://github.com/MoscowAbdelaal/flyrank-pdf-report-generator",
-    highlight: "FlyRank AI · PDF Generation + Idempotency",
-  },
-  {
-    id: "flyrank-background-jobs",
-    title: "Background Jobs with Inngest",
-    description:
-      "An Express API that offloads slow work to background jobs with Inngest. Demonstrates fast API responses (202 Accepted), status polling, automatic retries on failure, and scheduled cron jobs for routine tasks. Built as a FlyRank AI internship project.",
-    tech: ["Node.js", "Express", "Inngest", "TypeScript", "Cron"],
-    github: "https://github.com/MoscowAbdelaal/flyrank-background-jobs",
-    highlight: "FlyRank AI · Background Jobs + Cron",
-  },
+
+  // ===== #4 — AI DECISION FLOW (Visual + AI) =====
   {
     id: "ai-decision-flow",
     title: "AI Decision Flow with React Flow & Inngest",
@@ -64,6 +43,19 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/ai-decision-flow",
     highlight: "React Flow · Inngest · Full-Stack AI",
   },
+
+  // ===== #5 — BILLING ENGINE (Stripe + Exactly-once) =====
+  {
+    id: "billing-engine",
+    title: "Usage Metering and Billing Engine",
+    description:
+      "SaaS usage metering and billing engine with exactly-once metering using idempotency keys, quota enforcement (honest 429/402 responses), AI token cost calculation with cached/reasoning token pricing, and Stripe test mode integration with signature-verified deduplicating webhooks.",
+    tech: ["Node.js", "Express", "PostgreSQL", "Redis", "Stripe", "BullMQ", "Idempotency"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-metering-billing.git",
+    highlight: "FlyRank Capstone · Stripe + Exactly-once",
+  },
+
+  // ===== #6 — GIU NEXUS (Team Lead + AI) =====
   {
     id: "giu-nexus",
     title: "GIU Nexus – AI-Powered Career & Talent Platform",
@@ -73,6 +65,19 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/GIU-Nexus",
     highlight: "Team lead · 10 people · Full MERN + AI",
   },
+
+  // ===== #7 — SOCIAL CAMPAIGN PUBLISHER (Security) =====
+  {
+    id: "social-publisher",
+    title: "Multi-Platform Social Campaign Publisher",
+    description:
+      "Idempotent multi-platform social campaign publisher with durable BullMQ/Redis scheduler, HMAC-verified webhooks that reject forgeries with 400, AES-GCM encrypted OAuth tokens, and rate-limit-aware retry logic with backoff.",
+    tech: ["Node.js", "BullMQ", "Redis", "HMAC", "AES-GCM", "OAuth"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-capstone-social-studio.git",
+    highlight: "FlyRank Capstone · Idempotency + Security",
+  },
+
+  // ===== #8 — PRODUCTION REST API (100% Tests) =====
   {
     id: "crud-api",
     title: "Production REST API with Auth & Testing",
@@ -82,6 +87,30 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/crud-api",
     highlight: "100% test pass rate · Production-ready",
   },
+
+  // ===== #9 — PDF REPORT GENERATOR =====
+  {
+    id: "pdf-report-generator",
+    title: "PDF Report Generator with Parameterized Queries",
+    description:
+      "A service that generates branded PDF sales reports from SQL data. Features parameterized queries (e.g., last N days), a control panel to list all reports, idempotent generation, and download endpoints.",
+    tech: ["Node.js", "Express", "Playwright", "SQLite", "PDF Generation"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-pdf-report-generator",
+    highlight: "FlyRank AI · PDF Generation + Idempotency",
+  },
+
+  // ===== #10 — BACKGROUND JOBS (Async Processing) =====
+  {
+    id: "flyrank-background-jobs",
+    title: "Background Jobs with Inngest",
+    description:
+      "An Express API that offloads slow work to background jobs with Inngest. Demonstrates fast API responses (202 Accepted), status polling, automatic retries on failure, and scheduled cron jobs for routine tasks. Built as a FlyRank AI internship project.",
+    tech: ["Node.js", "Express", "Inngest", "TypeScript", "Cron"],
+    github: "https://github.com/MoscowAbdelaal/flyrank-background-jobs",
+    highlight: "FlyRank AI · Background Jobs + Cron",
+  },
+
+  // ===== #11 — WEB SCRAPING (Data Pipeline) =====
   {
     id: "web-scraping",
     title: "Web Scraping Pipeline with AI Enrichment",
@@ -91,6 +120,8 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/crud-api/tree/main/scraper",
     highlight: "AI-enriched · Caching + retry logic",
   },
+
+  // ===== #12 — CLASH OF CLANS (Game Engine) =====
   {
     id: "clash-of-clans",
     title: "Clash of Clans: Heroes – 2-Player Strategy Game",
@@ -100,6 +131,8 @@ export const projects = [
     github: "https://github.com/MoscowAbdelaal/Clash-of-clans-Legends",
     highlight: "Full game engine from scratch",
   },
+
+  // ===== #13 — CRYPTOGRAPHY (Low-level Security) =====
   {
     id: "cryptography",
     title: "Cryptography Suite – 3DES & Diffie-Hellman/RSA",
@@ -109,6 +142,8 @@ export const projects = [
     github: null,
     highlight: "From-scratch cryptography",
   },
+
+  // ===== #14 — ML CLASSIFICATION (Data Science) =====
   {
     id: "ml-classification",
     title: "Machine Learning – Classification & Clustering",
@@ -118,6 +153,8 @@ export const projects = [
     github: null,
     highlight: "Classification + Clustering + PCA",
   },
+
+  // ===== #15 — DISTRIBUTED SYSTEMS =====
   {
     id: "distributed-systems",
     title: "Distributed Systems – MapReduce & Theater Booking",
@@ -127,6 +164,8 @@ export const projects = [
     github: null,
     highlight: "MapReduce + Distributed locking",
   },
+
+  // ===== #16 — HRMS (Database Design) =====
   {
     id: "hrms",
     title: "Human Resource Management System (HRMS)",
@@ -136,6 +175,8 @@ export const projects = [
     github: null,
     highlight: "Complete database design + backend",
   },
+
+  // ===== #17 — UNITY (Game Dev) =====
   {
     id: "unity",
     title: "Interactive Media Experience – Unity",
