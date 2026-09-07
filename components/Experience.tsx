@@ -1,5 +1,7 @@
 import { experience } from "@/lib/data/experience";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaCheckCircle } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Experience() {
   return (
@@ -21,10 +23,18 @@ export default function Experience() {
               <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500" />
 
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-                <h3 className="text-lg font-semibold text-zinc-50">
-                  {job.role}
-                </h3>
-                <span className="text-sm text-zinc-500">{job.period}</span>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-lg font-semibold text-zinc-50">
+                    {job.role}
+                  </h3>
+                  {job.status === "Completed" && (
+                    <span className="inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap">
+                      <FaCheckCircle className="w-3 h-3" />
+                      Completed
+                    </span>
+                  )}
+                </div>
+                <span className="text-sm text-zinc-500 whitespace-nowrap">{job.period}</span>
               </div>
 
               <p className="text-blue-400 text-sm mb-4">
@@ -42,6 +52,19 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
+
+              {/* Verification Link to Credentials Page */}
+              {job.id === "flyrank" && (
+                <div className="mt-4 pt-4 border-t border-zinc-800">
+                  <Link
+                    href="/credentials"
+                    className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-300 transition"
+                  >
+                    <FiExternalLink className="w-4 h-4" />
+                    View credentials dossier
+                  </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>

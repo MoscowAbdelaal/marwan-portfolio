@@ -16,13 +16,13 @@ export default function Navbar() {
     { href: "#agent", label: "Moscow AI" },
     { href: "#future", label: "Future" },
     { href: "#contact", label: "Contact" },
+    // ❌ Credentials link removed from navbar
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 font-semibold tracking-tight text-zinc-50 text-sm sm:text-base">
-          {/* Original SVG Logo */}
           <Image
             src="/favicon.svg"
             alt="Logo"

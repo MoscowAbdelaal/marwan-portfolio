@@ -3,8 +3,10 @@ export const experience = [
     id: "flyrank",
     role: "Backend AI Engineering Intern",
     company: "FlyRank AI",
-    period: "Jun 2026 – Present",
+    period: "Jul 2026 – Sep 2026",
     location: "Remote",
+    status: "Completed",
+    verification: "/credentials",
     points: [
       "Built an embeddable widget platform as capstone: full-stack widget management, CORS-hardened public submission API with rate limiting, spam detection, geo enrichment fallback chain, versioned production bundle, real-time dashboard via SSE, targeting rules, and proof-of-work CAPTCHA.",
       "Built an AI Meeting Assistant as 10x capstone: full-stack app with React/Node.js/Express/Supabase that extracts summaries, decisions, and action items from meeting transcripts using Gemini 3.1 Flash Lite. Features PDF reporting, 24-hour caching for AI results, and automated daily reminders for overdue tasks. Deployed live on Render.com.",
@@ -21,9 +23,10 @@ export const experience = [
     company: "ICTeam El Komy",
     period: "Jun 2024 – May 2026",
     location: "Cairo, Egypt",
+    status: "Completed",
     points: [
-      "Delivered technical guidance to 20+ students across lab sessions, simplifying complex concepts and troubleshooting issues in real time.",
-      "Adopted an agile approach to adapt session content based on student feedback across multiple class cycles.",
+      "Delivered IT sessions to 30+ high school students per cohort, breaking down complex topics into digestible lessons. Managed learning platforms (Google Classroom), tracked attendance, and monitored student progress.",
+      "Adopted an agile approach to adapt session content based on student feedback across multiple class cycles.Acted as the primary liaison between students and instructors, ensuring a smooth learning experience. Graded assignments and quizzes, providing detailed feedback that helped students improve their performance by an average of 15%.",
     ],
   },
   {
