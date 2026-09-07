@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function CredentialsPage() {
@@ -16,7 +15,6 @@ export default function CredentialsPage() {
   ];
 
   const documents = [
-    // ✅ REORDERED: Backend AI Engineering cert first
     {
       title: "Certificate of Completion — Backend AI Engineering",
       file: "/flyrank-certificate-of-completion-backend-ai-engineering.pdf",
@@ -46,7 +44,7 @@ export default function CredentialsPage() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 py-24 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
-        {/* Header - Added pt-8 to push it down from navbar */}
+        {/* Header */}
         <div className="text-center pt-8 sm:pt-12 mb-12">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
             FlyRank AI Internship
@@ -90,7 +88,7 @@ export default function CredentialsPage() {
           </div>
         </section>
 
-        {/* Documents - Reordered */}
+        {/* Documents */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-zinc-200">Official Documents</h2>
           <div className="space-y-6">
