@@ -1,6 +1,24 @@
-import { FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
+"use client";
+
+import { useState, useEffect } from "react";
+import { FaCheckCircle, FaExternalLinkAlt, FaDownload, FaTrophy, FaExpand } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 export default function CredentialsPage() {
+  const [selectedDocument, setSelectedDocument] = useState<string | null>(null);
+  const [selectedTitle, setSelectedTitle] = useState<string>("");
+
+  useEffect(() => {
+    if (selectedDocument) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedDocument]);
+
   const verificationLinks = [
     {
       title: "Final Internship Report & Evaluation",
@@ -41,6 +59,22 @@ export default function CredentialsPage() {
     { value: "20", label: "Anthropic Certs" },
   ];
 
+  const rankings = [
+    { rank: "5th", label: "Worldwide", total: "9,731 interns" },
+    { rank: "2nd", label: "Backend AI Engineering Track", total: "3,050 interns" },
+    { rank: "2nd", label: "Egypt", total: "896 interns" },
+  ];
+
+  const openFullscreen = (file: string, title: string) => {
+    setSelectedDocument(file);
+    setSelectedTitle(title);
+  };
+
+  const closeFullscreen = () => {
+    setSelectedDocument(null);
+    setSelectedTitle("");
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 py-24 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
@@ -66,6 +100,28 @@ export default function CredentialsPage() {
           </div>
         </div>
 
+        {/* Rankings Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4 text-zinc-200">Program Rankings</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {rankings.map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-4 p-4 rounded-xl border border-zinc-800 bg-zinc-900/50"
+              >
+                <div className="p-2 rounded-full bg-amber-500/10 text-amber-400">
+                  <FaTrophy className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-amber-400">{item.rank}</p>
+                  <p className="text-sm text-zinc-400">{item.label}</p>
+                  <p className="text-xs text-zinc-500">out of {item.total}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Verification Links */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-zinc-200">Verify Credentials</h2>
@@ -88,7 +144,7 @@ export default function CredentialsPage() {
           </div>
         </section>
 
-        {/* Documents */}
+        {/* Documents - Fixed for Mobile */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-zinc-200">Official Documents</h2>
           <div className="space-y-6">
@@ -97,28 +153,61 @@ export default function CredentialsPage() {
                 key={doc.title}
                 className="rounded-xl border border-zinc-800 bg-zinc-900/50 overflow-hidden"
               >
-                <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
-                  <span className="font-medium text-zinc-200">{doc.title}</span>
-                  <span className="text-xs text-zinc-500">PDF</span>
+                <div className="p-4 border-b border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <span className="font-medium text-zinc-200 text-sm sm:text-base">{doc.title}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs text-zinc-500">PDF</span>
+                    <button
+                      onClick={() => openFullscreen(doc.file, doc.title)}
+                      className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 transition"
+                    >
+                      <FaExpand className="w-4 h-4" />
+                      Preview
+                    </button>
+                    <a
+                      href={doc.file}
+                      download
+                      className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 transition"
+                    >
+                      <FaDownload className="w-4 h-4" />
+                      Download
+                    </a>
+                  </div>
                 </div>
-                <div className="h-[500px] w-full">
-                  <object
-                    data={doc.file}
-                    type="application/pdf"
-                    className="w-full h-full"
+                {/* Mobile-friendly PDF preview */}
+                <div className="w-full">
+                  {/* On mobile, show a clickable card with document info instead of tiny PDF */}
+                  <div 
+                    className="sm:hidden p-6 bg-zinc-800/30 flex flex-col items-center justify-center gap-3 cursor-pointer hover:bg-zinc-800/50 transition rounded-b-xl"
+                    onClick={() => openFullscreen(doc.file, doc.title)}
                   >
-                    <p className="text-zinc-400 p-4">
-                      Your browser doesn&apos;t support PDF embedding.{' '}
-                      <a
-                        href={doc.file}
-                        className="text-blue-400 hover:underline"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Download the PDF instead.
-                      </a>
-                    </p>
-                  </object>
+                    <div className="text-4xl text-zinc-600">📄</div>
+                    <p className="text-sm text-zinc-400 text-center">Tap to preview full document</p>
+                    <span className="text-xs text-blue-400 flex items-center gap-1">
+                      <FaExpand className="w-3 h-3" />
+                      Open fullscreen
+                    </span>
+                  </div>
+                  {/* Desktop: PDF preview */}
+                  <div className="hidden sm:block h-[500px] w-full cursor-pointer hover:opacity-90 transition">
+                    <object
+                      data={doc.file}
+                      type="application/pdf"
+                      className="w-full h-full pointer-events-none"
+                    >
+                      <p className="text-zinc-400 p-4">
+                        Your browser doesn&apos;t support PDF embedding.{' '}
+                        <a
+                          href={doc.file}
+                          className="text-blue-400 hover:underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Download the PDF instead.
+                        </a>
+                      </p>
+                    </object>
+                  </div>
                 </div>
               </div>
             ))}
@@ -141,6 +230,62 @@ export default function CredentialsPage() {
           </div>
         </section>
       </div>
+
+      {/* Full-Screen Modal */}
+      {selectedDocument && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex flex-col"
+          onClick={closeFullscreen}
+        >
+          <div 
+            className="flex items-center justify-between p-4 bg-zinc-900/80 border-b border-zinc-800"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="text-zinc-200 font-medium truncate text-sm sm:text-base">{selectedTitle}</span>
+            <div className="flex items-center gap-3">
+              <a
+                href={selectedDocument}
+                download
+                className="text-sm text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <FaDownload className="w-4 h-4" />
+                Download
+              </a>
+              <button
+                onClick={closeFullscreen}
+                className="text-zinc-400 hover:text-white transition p-1"
+                aria-label="Close fullscreen"
+              >
+                <IoClose className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+
+          <div 
+            className="flex-1 w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <object
+              data={selectedDocument}
+              type="application/pdf"
+              className="w-full h-full"
+            >
+              <p className="text-zinc-400 p-4">
+                Your browser doesn&apos;t support PDF embedding.{' '}
+                <a
+                  href={selectedDocument}
+                  className="text-blue-400 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download the PDF instead.
+                </a>
+              </p>
+            </object>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
