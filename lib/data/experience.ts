@@ -35,6 +35,7 @@ export const experience = [
     period: "2024 – Present",
     location: "Cairo, Egypt",
     points: [
+      "Cairo Design District 2025 — Flow usher, managing attendee flow and ensuring a smooth experience throughout the event.",
       "EduGate 2026 — Served as university representative, engaging with prospective students and promoting the university's programs.",
       "Cairo International Film Festival — Ushered at screenings and events, managing guest flow and assisting attendees.",
       "GIU Career Fairs — Ushered and coordinated logistics, connecting students with recruiters and managing event flow.",
@@ -42,7 +43,7 @@ export const experience = [
       "GIU Orientation 2026 — Guided new students on campus tours, introducing them to facilities and university life.",
       "GIU Photoshoot 2026 — Flow team usher, managing participant coordination and on-site logistics.",
       "Baheya Charity Marathon 2025 — Managed the flow team to ensure a safe run and maintain high energy and enthusiasm among participants.",
-      "Alexandria Marathon Run 2024 (hosted by Alex Runners) — Coordinated safety hazards and traffic with police and authorities to ensure the safety of runners and cyclists along the route.",
+      "Alexandria 21k Run 2024 (hosted by Alex Runners) — Coordinated safety hazards and traffic with police and authorities to ensure the safety of runners and cyclists along the route.",
     ],
   },
 ];
