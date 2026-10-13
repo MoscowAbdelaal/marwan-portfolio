@@ -42,7 +42,7 @@ export const experience = [
       "GIU Orientation 2026 — Guided new students on campus tours, introducing them to facilities and university life.",
       "GIU Photoshoot 2026 — Flow team usher, managing participant coordination and on-site logistics.",
       "Baheya Charity Marathon 2025 — Managed the flow team to ensure a safe run and maintain high energy and enthusiasm among participants.",
-      "Alexandria Half Marathon 2024 — Coordinated safety hazards and traffic with police and authorities to ensure the safety of runners and cyclists along the route.",
+      "Alexandria Marathon Run 2024 (hosted by Alex Runners) — Coordinated safety hazards and traffic with police and authorities to ensure the safety of runners and cyclists along the route.",
     ],
   },
 ];
