@@ -23,10 +23,9 @@ export const experience = [
     company: "ICTeam El Komy",
     period: "Jun 2024 – May 2026",
     location: "Cairo, Egypt",
-    status: "Completed",
     points: [
-      "Delivered IT sessions to 30+ high school students per cohort, breaking down complex topics into digestible lessons. Managed learning platforms (Google Classroom), tracked attendance, and monitored student progress.",
-      "Adopted an agile approach to adapt session content based on student feedback across multiple class cycles.Acted as the primary liaison between students and instructors, ensuring a smooth learning experience. Graded assignments and quizzes, providing detailed feedback that helped students improve their performance by an average of 15%.",
+      "Delivered technical guidance to 20+ students across lab sessions, simplifying complex concepts and troubleshooting issues in real time.",
+      "Adopted an agile approach to adapt session content based on student feedback across multiple class cycles.",
     ],
   },
   {
@@ -36,9 +35,14 @@ export const experience = [
     period: "2024 – Present",
     location: "Cairo, Egypt",
     points: [
-      "Coordinated operations across multiple large-scale university events including graduations, career fairs, and seniors photoshoots.",
-      "Served as university representative at EduGate Event 2026.",
-      "Managed volunteer teams under high-pressure conditions.",
+      "EduGate 2026 — Served as university representative, engaging with prospective students and promoting the university's programs.",
+      "Cairo International Film Festival — Ushered at screenings and events, managing guest flow and assisting attendees.",
+      "GIU Career Fairs — Ushered and coordinated logistics, connecting students with recruiters and managing event flow.",
+      "GIU Graduation Ceremony 2026 — Part of the flow team, ensuring smooth operations and a seamless ceremony experience.",
+      "GIU Orientation 2026 — Guided new students on campus tours, introducing them to facilities and university life.",
+      "GIU Photoshoot 2026 — Flow team usher, managing participant coordination and on-site logistics.",
+      "Baheya Charity Marathon 2025 — Managed the flow team to ensure a safe run and maintain high energy and enthusiasm among participants.",
+      "Alexandria Half Marathon 2024 — Coordinated safety hazards and traffic with police and authorities to ensure the safety of runners and cyclists along the route.",
     ],
   },
 ];
